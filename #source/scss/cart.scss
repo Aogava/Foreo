@@ -1,10 +1,10 @@
 @import "_fontImport";
 @import "_nullStyle";
 
-$firstColor: #F0EEE8;
-$secondColor: #DD7660;
-$thirdColor: #82A583;
-$backgroundColor: #E5E5E5;
+$firstColor: #f0eee8;
+$secondColor: #dd7660;
+$thirdColor: #82a583;
+$backgroundColor: #e5e5e5;
 
 .body {
     background-color: $backgroundColor;
@@ -60,9 +60,10 @@ $backgroundColor: #E5E5E5;
 }
 
 .header__link {
-    position: relative;    
+    position: relative;
 
-    &:hover::after, &:focus::after {
+    &:hover::after,
+    &:focus::after {
         width: 100%;
         transform: translateX(-50%);
     }
@@ -93,12 +94,12 @@ $backgroundColor: #E5E5E5;
     border-radius: 100%;
     background-color: $secondColor;
     margin-right: 0.83vw;
-    transition: 0.3s;
+    transition-duration: 0.3s;
 
     &:hover {
         transform: scale(110%);
     }
-    
+
     &:active {
         transform: scale(90%);
     }
@@ -185,7 +186,6 @@ $backgroundColor: #E5E5E5;
     margin: 0 3vw 0 10.41vw;
 
     @media (min-width: 1096px) {
-        
     }
     @media (max-width: 1095px) {
         margin: 5vh auto;
@@ -208,6 +208,7 @@ $backgroundColor: #E5E5E5;
     grid-template-columns: auto auto;
     column-gap: 57px;
     margin-bottom: 6.66vh;
+    // position: relative;
 
     // outline: 2px solid yellow;
     // & *{
@@ -234,8 +235,9 @@ $backgroundColor: #E5E5E5;
 }
 
 .product-list__text-container {
+    position: relative;
     display: grid;
-    grid-template-rows: repeat(4, auto);
+    grid-template-rows: repeat(5, auto);
     // align-items: space-between;
     align-content: space-between;
     justify-content: start;
@@ -245,7 +247,43 @@ $backgroundColor: #E5E5E5;
     align-self: center;
 }
 
+.product-list__delete-button {
+    width: 35px;
+    height: 35px;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    right: -45px;
+    transition-duration: 0.2s;
+
+    &:hover {
+        transform: scale(110%);
+    }
+
+    &:active {
+        transform: scale(90%);
+    }
+
+    & > img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
 .product-list__description {
+}
+
+.product-list__product-amount {
+    display: inline;
+    width: 60px;
+    outline: 1px solid #000000;
+    border-radius: 4px;
+    // width: 107px;
+    // height: 21px;
+    padding: 3px;
 }
 
 .product-list__price {
@@ -260,7 +298,6 @@ $backgroundColor: #E5E5E5;
         grid-column-start: 2;
         margin: 0 auto;
     }
-    
 }
 .main-screen__general-info {
     padding: 4.44vh 2.22vw;
@@ -271,11 +308,13 @@ $backgroundColor: #E5E5E5;
     row-gap: 15px;
     justify-content: start;
 
-    & > p:nth-child(7), & > input:nth-child(8){
+    & > p:nth-child(7),
+    & > input:nth-child(8) {
         margin-top: 40px;
     }
 
-    & > p:nth-child(9), & > input:nth-child(10){
+    & > p:nth-child(9),
+    & > input:nth-child(10) {
         margin-bottom: 40px;
     }
 }
@@ -291,7 +330,6 @@ $backgroundColor: #E5E5E5;
 }
 
 .main-screen__checkbox {
-
 }
 
 .main-screen__credit-card-info {
@@ -302,7 +340,8 @@ $backgroundColor: #E5E5E5;
     row-gap: 15px;
     justify-content: start;
 
-    & > p:nth-child(1), & > input:nth-child(2){
+    & > p:nth-child(1),
+    & > input:nth-child(2) {
         margin-bottom: 40px;
     }
 
@@ -347,16 +386,16 @@ $backgroundColor: #E5E5E5;
 }
 
 @keyframes floating {
-    0%{
+    0% {
         transform: translateY(0%);
     }
-    25%{
+    25% {
         transform: translateY(35%);
     }
-    50%{
+    50% {
         transform: translateY(-35%);
     }
-    100%{
+    100% {
         transform: translateY(0%);
     }
 }
@@ -468,7 +507,8 @@ $backgroundColor: #E5E5E5;
         transition: 0.3s;
     }
 
-    &:hover::after, &:focus::after {
+    &:hover::after,
+    &:focus::after {
         width: 100%;
         transform: translateX(-50%);
     }
@@ -499,7 +539,7 @@ $backgroundColor: #E5E5E5;
     &:hover {
         transform: scale(110%);
     }
-    
+
     &:active {
         transform: scale(90%);
     }
@@ -535,7 +575,7 @@ $backgroundColor: #E5E5E5;
     &:hover {
         transform: scale(110%);
     }
-    
+
     &:active {
         transform: scale(90%);
     }

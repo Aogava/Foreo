@@ -20,7 +20,7 @@
 		</div>
 		<div class="header__third-part">
 			<a class="header__cart" href="cart.html"><img src="./img/white-cart.svg" alt="cart"></a>
-			<span class="header__candles-amount usual-text">3 candles</span>
+			<span class="header__candles-amount usual-text"></span>
 			<a class="header__instagram-link" href="https://www.instagram.com/valery_bagriy/" target="blank"><img
 					src="./img/black-instagram-logo.svg" alt="instagram"></a>
 		</div>
@@ -39,7 +39,7 @@
 			<h1 class="main-screen__title title">Aesthetic and natural candles for your soul</h1>
 			<img class="main-screen__circle-1" src="./img/circle_1.svg">
 			<div class="main-screen__main-image"><img src="./img/main_image.jpg"></div>
-			<button class="main-screen__relax-button title">Relax</button>
+			<a href="./store.html" class="main-screen__relax-button title">Relax</a>
 			<div class="main-screen__arrow-up"><img src="./img/arrow-up.svg"></div>
 		</div>
 	</div>
@@ -78,46 +78,46 @@
 		<img class="assortement__background" src="./img/line_3.svg">
 		<ul class="assortement__list products">
 			<li class="products__item">
-				<a href="#" class="products__img"><img src="./img/product_1.png" alt="candle"></a>
+				<div class="products__img"><img src="./img/product_1.png" alt="candle"></div>
 				<h3 class="products__name">Candle for adults</h3>
 				<p class="products__description">white | black | red</p>
 				<h4 class="products__price">10$</h4>
-				<button class="products__buy-button">Add to cart</button>
+				<button class="products__buy-button _popup-button" value="product-1">Add to cart</button>
 			</li>
 			<li class="products__item">
-				<a href="product-example.html" class="products__img"><img src="./img/product_2.png" alt="candle"></a>
+				<div class="products__img"><img src="./img/product_2.png" alt="candle"></div>
 				<h3 class="products__name">Minimalist candle</h3>
 				<p class="products__description">white | black | red</p>
 				<h4 class="products__price">15$</h4>
-				<button class="products__buy-button">Add to cart</button>
+				<button class="products__buy-button _popup-button" value="product-2">Add to cart</button>
 			</li>
 			<li class="products__item">
-				<a href="#" class="products__img"><img src="./img/product_3.png" alt="candle"></a>
+				<div class="products__img"><img src="./img/product_3.png" alt="candle"></div>
 				<h3 class="products__name">Candle in colored glass</h3>
 				<p class="products__description">20+ colors</p>
 				<h4 class="products__price">17$</h4>
-				<button class="products__buy-button">Add to cart</button>
+				<button class="products__buy-button _popup-button" value="product-3">Add to cart</button>
 			</li>
 			<li class="products__item products__item_with-circle">
-				<a href="#" class="products__img"><img src="./img/product_1.png" alt="candle"></a>
+				<div class="products__img"><img src="./img/product_1.png" alt="candle"></div>
 				<h3 class="products__name">Candle for adults</h3>
 				<p class="products__description">white | black | red</p>
 				<h4 class="products__price">10$</h4>
-				<button class="products__buy-button">Add to cart</button>
+				<button class="products__buy-button _popup-button" value="product-1">Add to cart</button>
 			</li>
 			<li class="products__item">
-				<a href="#" class="products__img"><img src="./img/product_2.png" alt="candle"></a>
+				<div class="products__img"><img src="./img/product_2.png" alt="candle"></div>
 				<h3 class="products__name">Minimalist candle</h3>
 				<p class="products__description">white | black | red</p>
 				<h4 class="products__price">15$</h4>
-				<button class="products__buy-button">Add to cart</button>
+				<button class="products__buy-button _popup-button" value="product-2">Add to cart</button>
 			</li>
 			<li class="products__item">
-				<a class="products__img"><img src="./img/product_3.png" alt="candle"></a>
+				<div class="products__img"><img src="./img/product_3.png" alt="candle"></div>
 				<h3 class="products__name">Candle in colored glass</h3>
 				<p class="products__description">20+ colors</p>
 				<h4 class="products__price">17$</h4>
-				<button class="products__buy-button">Add to cart</button>
+				<button class="products__buy-button _popup-button" value="product-3">Add to cart</button>
 			</li>
 		</ul>
 		<a class="assortement__see-more" href="store.html">See more</a>
@@ -206,6 +206,94 @@
 			</div>
 		</div>
 	</footer>
+
+	<div class="popups">
+		<div class="popups__background"></div>
+		<div id="product-1" class="popup">
+			<div class="popup__body">
+				<button class="popup__close"><img src="./img/close-icon.png" alt="close"></button>
+				<div class="popup__second-part">
+					<h1 class="popup__title title">Candle for adults</h1>
+					<form class="popup__form usual-text" action="#" method="post">
+						<p class="popup__form-text">Color:</p>
+						<select class="popup__combobox usual-text" name="color" id="color">
+							<option value="red">Red</option>
+							<option value="blue">Blue</option>
+							<option value="green">Green</option>
+						</select>
+						<p class="popup__form-text">Smell:</p>
+						<select class="popup__combobox usual-text" name="smell" id="smell">
+							<option value="orange">Orange</option>
+							<option value="plastic">Plastic</option>
+							<option value="rubber">Rubber</option>
+						</select>
+						<p class="popup__form-text">Amount:</p>
+						<input class="popup__candles-amount usual-text" type="number" min="1" value="1"
+							name="candlesAmount">
+						<h2 class="popup__price usual-text">10$</h2>
+						<button class="popup__submit-button usual-text">Add to cart</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id="product-2" class="popup">
+			<div class="popup__body">
+				<button class="popup__close"><img src="./img/close-icon.png" alt="close"></button>
+				<div class="popup__second-part">
+					<h1 class="popup__title title">Minimalist candle</h1>
+					<form class="popup__form usual-text" action="#" method="post">
+						<p class="popup__form-text">Color:</p>
+						<select class="popup__combobox usual-text" name="color" id="color">
+							<option value="red">Red</option>
+							<option value="blue">Blue</option>
+							<option value="green">Green</option>
+						</select>
+						<p class="popup__form-text">Smell:</p>
+						<select class="popup__combobox usual-text" name="smell" id="smell">
+							<option value="fishy">Fishy</option>
+							<option value="cheese">Cheese</option>
+							<option value="glue">Glue</option>
+						</select>
+						<p class="popup__form-text">Amount:</p>
+						<input class="popup__candles-amount usual-text" type="number" min="1" value="1"
+							name="candlesAmount">
+						<h2 class="popup__price usual-text">15$</h2>
+						<button class="popup__submit-button usual-text">Add to cart</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id="product-3" class="popup">
+			<div class="popup__body">
+				<button class="popup__close"><img src="./img/close-icon.png" alt="close"></button>
+				<div class="popup__second-part">
+					<h1 class="popup__title title">Candle in colored glass</h1>
+					<form class="popup__form usual-text" action="#" method="post">
+						<p class="popup__form-text">Color:</p>
+						<select class="popup__combobox usual-text" name="color" id="color">
+							<option value="red">Red</option>
+							<option value="blue">Blue</option>
+							<option value="green">Green</option>
+						</select>
+						<p class="popup__form-text">Smell:</p>
+						<select class="popup__combobox usual-text" name="smell" id="smell">
+							<option value="apple">Apple</option>
+							<option value="wood">Wood</option>
+							<option value="grass">Grass</option>
+						</select>
+						<p class="popup__form-text">Amount:</p>
+						<input class="popup__candles-amount usual-text" type="number" min="1" value="1"
+							name="candlesAmount">
+						<h2 class="popup__price usual-text">17$</h2>
+						<button class="popup__submit-button usual-text">Add to cart</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="./js/buyingSubmitPopup.js"></script>
+	<script src="./js/cartPoductCounter.js"></script>
 </body>
 
 </html>
