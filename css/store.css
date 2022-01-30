@@ -129,15 +129,31 @@ h1, h2, h3, h4, h5, h6 {
       justify-self: center;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (auto)[3];
-      grid-template-columns: repeat(3, auto);
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  gap: 20px;
+}
+
+@media (min-width: 600px) {
+  .header__links {
+    -ms-grid-columns: (auto)[3];
+        grid-template-columns: repeat(3, auto);
+  }
+}
+
+@media (max-width: 599px) {
+  .header__links {
+    -ms-grid-rows: (auto)[3];
+        grid-template-rows: repeat(3, auto);
+  }
 }
 
 .header__link {
   position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .header__link:hover::after, .header__link:focus::after {

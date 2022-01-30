@@ -55,12 +55,20 @@ $backgroundColor: #e5e5e5;
     width: 22.15vw;
     justify-self: center;
     display: grid;
-    grid-template-columns: repeat(3, auto);
     justify-content: space-between;
+    gap: 20px;
+
+    @media (min-width: 600px) {
+        grid-template-columns: repeat(3, auto);
+    }
+    @media (max-width: 599px) {
+        grid-template-rows: repeat(3, auto);
+    }
 }
 
 .header__link {
     position: relative;
+    width: max-content;
 
     &:hover::after,
     &:focus::after {
@@ -205,15 +213,16 @@ $backgroundColor: #e5e5e5;
 
 .product-list__item {
     display: grid;
-    grid-template-columns: auto auto;
     column-gap: 57px;
     margin-bottom: 6.66vh;
-    // position: relative;
+    gap: 20px;
 
-    // outline: 2px solid yellow;
-    // & *{
-    //     outline: 2px solid yellow;
-    // }
+    @media (min-width: 600px) {
+        grid-template-columns: repeat(2, auto);
+    }
+    @media (max-width: 599px) {
+        grid-template-rows: repeat(2, auto);
+    }
 }
 
 .product-list__image-container {

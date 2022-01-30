@@ -96,7 +96,7 @@ document.addEventListener("input", event => {
             if (product.id == target.closest(".product-list__item").dataset.id && product.color == target.closest(".product-list__item").dataset.color && product.smell == target.closest(".product-list__item").dataset.smell) {
                 return true;
             }
-        })
+        });
         if (productFound >= 0) {
             submitedProducts[productFound].amount = +target.value;
             submitedProducts[productFound].price = submitedProducts[productFound].amount * getProductPriceById(+target.closest(".product-list__item").dataset.id);
@@ -104,7 +104,7 @@ document.addEventListener("input", event => {
             console.log(target.closest(".product-list__item").dataset.amount)
             setTimeout(() => {
                 drawProductList();
-            }, 1000);
+            }, 2000);
             // console.log(submitedProducts);
         }
     }
